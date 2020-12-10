@@ -38,6 +38,11 @@ fs.readdir("./commands/", (err, files) => {
     console.log("Loading Command: "+commandName)
   });
 });
-
+const Eris = require("eris")
+const bot = new Eris(client.config.Token, {
+    disableEveryone: true,
+    defaultImageSize: 512
+});
 //Logging in to discord
 client.login(client.config.Token)
+bot.connect();

@@ -20,13 +20,12 @@ module.exports = {
     return message.channel.send(new MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL()).setThumbnail(client.user.avatarURL())
 .setDescripiton(`\`\`\`javascript\n${moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]")}\`\`\``)
-  .setThumbnail(this.client.user.avatarURL)
-        .setDescription(`\`\`\`javascript\nUptime: ${moment.duration(this.client.uptime).format(" D [days], H [hrs], m [mins], s [secs]")}\`\`\``)
-        .setTitle("Renzo Status")
-        .addField("Some Information",
-`Total Servers: \`${client.guilds.size}\`
-Total Users: \`${client.users.size}\`
-Total Commands: \`${client.commands.size}\`
+  .setThumbnail(client.user.avatarURL)
+        .setTitle(`${client.user.username}`+ "Status")
+        .addField("Some Information",`
+Total Servers: \`${bot.guilds.size}\`
+Total Users: \`${bot.users.size}\`
+Total Commands: \`${bot.commands.size}\`
 RAM Usage: **${bytesToSize(process.memoryUsage().heapUsed)}/${bytesToSize(os.totalmem)}**
 Eris.js: **v0.13.3**
 Nodejs version: **${process.version}**
