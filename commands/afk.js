@@ -1,8 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const sendError = require("../util/error");
 const fs = require('fs');
-
-
 module.exports = {
   info: {
     name: "afk",
@@ -10,7 +8,6 @@ module.exports = {
     usage: "[afk]",
     aliases: ["24/7"],
   },
-
   run: async function (client, message, args) {
     let afk = JSON.parse(fs.readFileSync("./afk.json", "utf8"));
        if (!afk[message.guild.id]) afk[message.guild.id] = {
