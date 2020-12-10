@@ -6,7 +6,7 @@ module.exports = {
     name: "loop",
     description: "Toggle music loop",
     usage: "loop",
-    aliases: ["l"],
+    aliases: ["repeat"],
   },
 
   run: async function (client, message, args) {
