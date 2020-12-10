@@ -13,7 +13,7 @@ const { Database } = require("quickmongo");
 const db = new Database(client.config.MongoDB)
 let prefix1 = await db.get(`newprefix_${message.guild.id}`);
 if(prefix1 === null ) prefix1 = client.config.prefix;
-      return message.channel.send(new require("discord.js").MessageEmbed()
+      return message.channel.send(new MessageEmbed()
         .setAuthor(client.user.username, client.user.displayAvatarURL())
         .setThumbnail(client.user.displayAvatarURL())
         .setColor("RANDOM")
