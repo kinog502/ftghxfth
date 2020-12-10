@@ -15,19 +15,14 @@ let prefix1 = await db.get(`newprefix_${message.guild.id}`);
 if(prefix1 === null ) prefix1 = client.config.prefix;
 
 var p = prefix1
-if(!args[0])return message.channel.send({
-        embed: {
-            color: 'GREEN',
-            author: { name: `${client.user.username}'s Commands` },
-            footer: { text: `Requested By: ${message.author.tag}`, icon: message.author.avatarURL() },
-            fields: [
-                { name: 'Bot', value: '`ping`, `invite`, `prefix`' },
-                { name: 'Music', value: '`play`, `pause`, `playlist`, `resume`, `queue`, `lyrics`, `remove`, `skipto`, `afk`, `search`, `shuffle`, `np`, `loop`, `volume`, `skip`, `stop`' },
-                {name: "Quick Links", value: `[Invite](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=3169280&scope=bot) | [Support Server](${client.config.support})`}],
-            timestamp: new Date(),
-            description: `${client.user.username} is the easiest way to play music in your Discord server. It supports YouTube only.`,
-        },
-    });
+if(!args[0])return message.channel.send(new MessageEmbed().setDescription(`${client.user.username} is the easiest way to play music in your Discord server. It supports YouTube only.`)
+.setAuthor(client.user.username, client.user.avatarURL()).addField("Bot",'`ping`, `invite`, `prefix`')
+.setFooter(`Requested By: ${message.author.tag}`, message.author.avatarURL()).setTimestamp()
+ .setColor("GREEN")             
+.setThumbnail(client.user.avatarURL())
+.addField("Music",'`play`, `pause`, `playlist`, `resume`, `queue`, `lyrics`, `remove`, `skipto`, `afk`, `search`, `shuffle`, `np`, `loop`, `volume`, `skip`, `stop`')  
+.addField("Quick Links",`[Invite](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=3169280&scope=bot) | [Support Server](${client.config.support})`)   
+) 
         else {
             let cmd = args[0]
             let command = client.commands.get(cmd)
