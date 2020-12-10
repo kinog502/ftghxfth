@@ -28,10 +28,10 @@ var permissions = 37080128;
 To get started, join a voice channel and ${prefix1}play a song. You can use song names, video links, and playlist links.
 
 `)
-        .addField("Commands",`A full list of commands is available by \`${prefix1}commands\``)
-        .addField("Permium",`${client.user.username} Premium gives you access to cool features, like volume control, 24/7 mode, audio effects, and saved queues.`)
-        .addField("Add to Discord", `${client.user.username} can be added to as many servers as you want! [Click here to add it to yours.](https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=${permissions}&scope=bot)`)
-        .addField("Support", `[Click here](${client.config.support}) to talk to our support team if you're having trouble or have any questions.`)
+        .addField("Commands",`A full list of commands is available by \`${prefix1}commands\``, false)
+        .addField("Permium",`${client.user.username} Premium gives you access to cool features, like volume control, 24/7 mode, audio effects, and saved queues.`, false)
+        .addField("Add to Discord", `${client.user.username} can be added to as many servers as you want! [Click here to add it to yours.](https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=${permissions}&scope=bot)\n\n`, false)
+        .addField("Support", `[Click here](${client.config.support}) to talk to our support team if you're having trouble or have any questions.`, false)
         .setFooter(`To get info of each command you can do ${prefix1}help [command]`)
 
         if(!args[0])return message.channel.send(embed)
