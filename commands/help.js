@@ -25,7 +25,6 @@ if(prefix1 === null ) prefix1 = client.config.prefix;
 \`${prefix1}Pause \`  = ايقاف مؤقت الاغنية
 \`${prefix1}Resume  \`  =  اكمال الاغنية 
 \`${prefix1}stop \`  = لأيقاف الأغنية وخروج البوت من الروم
-\`${prefix1}forceskip \`  = لتخطي الأغنية بشكل مباشر
 \`${prefix1}Queue  \`  = عرض القائمة 
 \`${prefix1}skipto  \`  = لتخطي الأغنية الى الأغنية القادمة في طابور الموسيقى القادمة
 \`${prefix1}Skip  \`  = تخطي للاغنية التالية 
@@ -34,7 +33,7 @@ if(prefix1 === null ) prefix1 = client.config.prefix;
 \`${prefix1}repeat \`  = تكرار الاغنية
 \`${prefix1}afk\` = لجعل البوت ف روم 24 ساعه 
 \`${prefix1}lyrics\` = لمعرفه كلمات الاغنيه 
-\`${prefix1}playlist\` = لتشغيل قائمه التشغيل 
+\`${prefix1}playlist\` = لتشغيل قائمه التشغيل   
 ▬▬▬▬▬▬▬▬▬≧ (ᵔᴥᵔ) 
         `)
         .setFooter("ORZ BOT")
