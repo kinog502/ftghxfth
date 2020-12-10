@@ -13,28 +13,22 @@ const { Database } = require("quickmongo");
 const db = new Database(client.config.MongoDB)
 let prefix1 = await db.get(`newprefix_${message.guild.id}`);
 if(prefix1 === null ) prefix1 = client.config.prefix;
-var allcmds = "";
-client.commands.forEach(cmd => {
-let cmdinfo = cmd.info
-allcmds+="``"+client.config.prefix+cmdinfo.name+" "+cmdinfo.usage+"`` ~ "+cmdinfo.description+"\n"
-})
-var permissions = 37080128;
-        let embed = new MessageEmbed()
-        .setAuthor(`${client.user.username}`, client.user.avatarURL())
-        .setURL(`https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=${permissions}&scope=bot`)
-        .setColor("BLUE")
-        .setDescription(`${client.user.username} is the easiest way to play music in your Discord server. Its Supported YouTube, Soundcloud and more!
 
-To get started, join a voice channel and ${prefix1}play a song. You can use song names, video links, and playlist links.
-
-`)
-        .addField("Commands",`A full list of commands is available by \`${prefix1}commands\``, false)
-        .addField("Permium",`${client.user.username} Premium gives you access to cool features, like volume control, 24/7 mode, audio effects, and saved queues.`, false)
-        .addField("Add to Discord", `${client.user.username} can be added to as many servers as you want! [Click here to add it to yours.](https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=${permissions}&scope=bot)\n\n`, false)
-        .addField("Support", `[Click here](${client.config.support}) to talk to our support team if you're having trouble or have any questions.`, false)
-        .setFooter(`To get info of each command you can do ${prefix1}help [command]`)
-
-        if(!args[0])return message.channel.send(embed)
+var p = prefix1
+if(!args[0])return message.channel.send({
+        embed: {
+            color: 'GREEN',
+            author: { name: `${client.user.username}'s Commands` },
+            footer: { text: `Requested By: ${message.author.tag}`, icon: message.author.avatarURL() },
+            fields: [
+                { name: 'Bot', value: '`ping`' },
+                { name: 'Music', value: '`play`, `pause`, `playlist`, `resume`, `queue`, `lyrics`, `remove`, `skipto`, `afk`, `search`, `shuffle`, `np`, `loop`, `volume`, `skip`, `stop`' },
+                { name: 'Filters', value: '`bassboost`, `8D`, `vaporwave`, `nightcore`, `phaser`, `tremolo`, `vibrato`, `reverse`, `treble`, `normalizer`, `surrounding`, `pulsator`, `subboost`, `karaoke`, `flanger`, `gate`, `haas`, `mcompand`' },
+                {name: "Quick Links", value: `[Invite](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=3169280&scope=bot) | [Support Server](${client.config.support})`}],
+            timestamp: new Date(),
+            description: `To use filters, filter (the filter). Example : ${p}filter bassboost.`,
+        },
+    });
         else {
             let cmd = args[0]
             let command = client.commands.get(cmd)
