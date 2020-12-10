@@ -37,7 +37,7 @@ Nodejs version: **${process.version}**
 Platform: **${os.platform()}**
 OS: **${os.platform()} ${os.release()}**
 Processor: **${os.cpus()[0].model}**`, true)
-        .setColor("RENZO")
+        .setColor("GREEN")
         .setTimestamp());                              
                                
 }}
