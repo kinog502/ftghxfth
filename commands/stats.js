@@ -1,6 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const sendError = require("../util/error");
 const moment = require("moment")
+const Eris = require("eris")
 const fs = require('fs');
 const os = require("os");
 const bytesToSize = bytes => {
@@ -17,6 +18,10 @@ module.exports = {
   },
 
   run: async function (client, message, args) {
+  const bot = new Eris(client.config.Token, {
+    disableEveryone: true,
+    defaultImageSize: 512
+});
     return message.channel.send(new MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL()).setThumbnail(client.user.avatarURL())
 .setDescripiton(`\`\`\`javascript\n${moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]")}\`\`\``)
