@@ -1,9 +1,12 @@
 module.exports = async (client, message) => {
   if (message.author.bot) return;
-
+const { Database } = require("quickmongo");
+const db = new Database(client.config.MongoDB)
+let prefix1 = await db.get(`newprefix_${message.guild.id}`);
+if(prefix1 === null ) prefix1 = client.config.prefix;
   //Prefixes also have mention match
   const prefixMention = new RegExp(`^<@!?${client.user.id}> `);
-  const prefix = message.content.match(prefixMention) ? message.content.match(prefixMention)[0] : client.config.prefix;
+  const prefix = message.content.match(prefixMention) ? message.content.match(prefixMention)[0] : prefix1;
 
   if (message.content.indexOf(prefix) !== 0) return;
 

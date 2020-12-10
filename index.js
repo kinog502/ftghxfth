@@ -7,7 +7,10 @@ client.commands = new Collection();//Making client.commands as a Discord.js Coll
 client.queue = new Map()
 
 client.config = {
-  prefix: process.env.PREFIX
+  prefix: ".",
+  MongoDB: "mongodb://ugrsnmrfptbdsblkneky:s6vdckTet7FtYET55qUp@bjzdgr8stmb8isz-mongodb.services.clever-cloud.com:27017/bjzdgr8stmb8isz",
+  Token: "NzY1MzcxNjgzOTUwNTU5MjMz.X4T17Q.-Lbsjn4A7ksD_389y_rSrJY3_1k"
+  
 }
 
 //Loading Events
@@ -34,4 +37,4 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 //Logging in to discord
-client.login(process.env.TOKEN)
+client.login(client.config.Token)
