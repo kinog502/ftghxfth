@@ -16,7 +16,7 @@ module.exports = {
     usage: "[about]",
     aliases: ["bot","botinfo"],
   },
-
+dsadad
   run: async function (client, message, args) {
   const bot = new Eris(client.config.Token, {
     disableEveryone: true,
