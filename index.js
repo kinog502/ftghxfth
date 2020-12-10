@@ -9,7 +9,8 @@ client.queue = new Map()
 client.config = {
   prefix: ".",
   MongoDB: "mongodb://ugrsnmrfptbdsblkneky:s6vdckTet7FtYET55qUp@bjzdgr8stmb8isz-mongodb.services.clever-cloud.com:27017/bjzdgr8stmb8isz",
-  Token: "NzY1MzcxNjgzOTUwNTU5MjMz.X4T17Q.-Lbsjn4A7ksD_389y_rSrJY3_1k"
+  Token: "NzY1MzcxNjgzOTUwNTU5MjMz.X4T17Q.-Lbsjn4A7ksD_389y_rSrJY3_1k",
+  support: ""
   
 }
 

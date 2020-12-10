@@ -13,45 +13,25 @@ const { Database } = require("quickmongo");
 const db = new Database(client.config.MongoDB)
 let prefix1 = await db.get(`newprefix_${message.guild.id}`);
 if(prefix1 === null ) prefix1 = client.config.prefix;
-      return message.channel.send(new require("discord.js").MessageEmbed()
-        .setAuthor(client.user.username, client.user.displayAvatarURL())
-        .setThumbnail(client.user.displayAvatarURL())
-        .setColor("RANDOM")
-        .setTitle("الاوامر / prefix   =  "+`${prefix1}`)
-        .setDescription(`
-▬▬▬▬▬▬▬▬▬≧ (ᵔᴥᵔ) 
-\`أوامر الموسيقى  \`  :notes:
-\`oPlay  \`  = تشغيل الاغنية او اضافتها للقائمة او اكمال الاغنية [p]
-\`oPause \`  = ايقاف مؤقت الاغنية
-\`oResume  \`  =  اكمال الاغنية 
-\`ostop \`  = لأيقاف الأغنية وخروج البوت من الروم
-\`oforceskip \`  = لتخطي الأغنية بشكل مباشر
-\`oQueue  \`  = عرض القائمة 
-\`oskipto  \`  = لتخطي الأغنية الى الأغنية القادمة في طابور الموسيقى القادمة
-\`oSkip  \`  = تخطي للاغنية التالية 
-\`oVolume \`  =  تغيير الصوت [vol] 
-\`onp  \`  = عرض مايتم تشغيله الان [np] 
-\`orepeat \`  = تكرار الاغنية
-▬▬▬▬▬▬▬▬▬≧ (ᵔᴥᵔ) 
-        `)
-        .setFooter("ORZ BOT")
-.setImage("https://cdn.discordapp.com/attachments/737574424772870185/768562268375089172/647647647.png")
-      var allcmds = "";
-
-        client.commands.forEach(cmd => {
-            let cmdinfo = cmd.info
-            allcmds+="``"+client.config.prefix+cmdinfo.name+" "+cmdinfo.usage+"`` ~ "+cmdinfo.description+"\n"
-        })
-
+var allcmds = "";
+client.commands.forEach(cmd => {
+let cmdinfo = cmd.info
+allcmds+="``"+client.config.prefix+cmdinfo.name+" "+cmdinfo.usage+"`` ~ "+cmdinfo.description+"\n"
+})
+var permissions = 37080128;
         let embed = new MessageEmbed()
-        .setAuthor("Commands of "+client.user.username)
+        .setAuthor(`${client.user.username}`, client.user.avatarURL())
+        .setURL(`https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=${permissions}&scope=bot`)
         .setColor("BLUE")
         .setDescription(`${client.user.username} is the easiest way to play music in your Discord server. Its Supported YouTube, Soundcloud and more!
 
 To get started, join a voice channel and ${prefix1}play a song. You can use song names, video links, and playlist links.
 
 `)
-        //.setDescription(allcmds)
+        .addField("Commands",`A full list of commands is available by \`${prefix1}commands\``)
+        .addField("Permium",`${client.user.username} Premium gives you access to cool features, like volume control, 24/7 mode, audio effects, and saved queues.`)
+        .addField("Add to Discord", `${client.user.username} can be added to as many servers as you want! [Click here to add it to yours.](https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=${permissions}&scope=bot)`)
+        .addField("Support", `[Click here](${client.config.support}) to talk to our support team if you're having trouble or have any questions.`)
         .setFooter(`To get info of each command you can do ${prefix1}help [command]`)
 
         if(!args[0])return message.channel.send(embed)
