@@ -19,7 +19,12 @@ module.exports = {
         let embed = new MessageEmbed()
         .setAuthor("Commands of "+client.user.username)
         .setColor("BLUE")
-        .setDescription(allcmds)
+        .setDescription(`${client.user.username} is the easiest way to play music in your Discord server. Its Supported YouTube, Soundcloud and more!
+
+To get started, join a voice channel and ${client.config.prefix}play a song. You can use song names, video links, and playlist links.
+
+`)
+        //.setDescription(allcmds)
         .setFooter(`To get info of each command you can do ${client.config.prefix}help [command]`)
 
         if(!args[0])return message.channel.send(embed)
