@@ -1,15 +1,39 @@
 const { MessageEmbed } = require("discord.js");
 const sendError = require("../util/error");
+const moment = require("moment")
 const fs = require('fs');
+const os = require("os");
+const bytesToSize = bytes => {
+      const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
+      if (bytes == 0) return "0 Byte";
+      const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+      return Math.round(bytes / Math.pow(1024, i), 2) + " " + sizes[i];};
 module.exports = {
   info: {
-    name: "about",
-    description: "24/7",
+    name: "stats",
+    description: "shows stats the bot",
     usage: "[about]",
-    aliases: [],
+    aliases: ["bot","botinfo"],
   },
+
   run: async function (client, message, args) {
     return message.channel.send(new MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL()).setThumbnail(client.user.avatarURL())
-)
-  }}
+.setDescripiton(`\`\`\`javascript\n${moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]")}\`\`\``)
+  .setThumbnail(this.client.user.avatarURL)
+        .setDescription(`\`\`\`javascript\nUptime: ${moment.duration(this.client.uptime).format(" D [days], H [hrs], m [mins], s [secs]")}\`\`\``)
+        .setTitle("Renzo Status")
+        .addField("Some Information",
+`Total Servers: \`${client.guilds.size}\`
+Total Users: \`${client.users.size}\`
+Total Commands: \`${client.commands.size}\`
+RAM Usage: **${bytesToSize(process.memoryUsage().heapUsed)}/${bytesToSize(os.totalmem)}**
+Eris.js: **v0.13.3**
+Nodejs version: **${process.version}**
+Platform: **${os.platform()}**
+OS: **${os.platform()} ${os.release()}**
+Processor: **${os.cpus()[0].model}**`, true)
+        .setColor("RENZO")
+        .setTimestamp());                              
+                               
+}}

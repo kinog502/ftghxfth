@@ -23,6 +23,7 @@
     "youtube-sr": "^2.0.1",
     "lyrics-finder": "^21.4.0",
     "ytdl-core-discord": "^1.2.4",
+    "os": "0.0.1",
     "fs": "0.0.1-security",
     "ytpl": "^2.0.0-alpha.3",
     "node-opus": "^0.3.3",

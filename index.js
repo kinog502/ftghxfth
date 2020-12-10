@@ -10,7 +10,7 @@ const player = new Player(client)
 client.player = player;
 client.config = {
   prefix: ".",
-  MongoDB: "mongodb://ugrsnmrfptbdsblkneky:s6vdckTet7FtYET55qUp@bjzdgr8stmb8isz-mongodb.services.clever-cloud.com:27017/bjzdgr8stmb8isz",
+  MongoDB: "mongodb://u4hyvhts2vyriyhtg2do:ojIfYJlDhxZ0yD2fAazO@byruqeacfwrvcd7-mongodb.services.clever-cloud.com:27017/byruqeacfwrvcd7",
   Token: "Nzg2NzE5MTE0MDU5MzE3MzI5.X9KfRQ.rGNbKbuBan2-OeMVlFSTSxPMYCo",
   support: "https://discord.gg/tU2HMUH8UR"
   
