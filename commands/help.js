@@ -21,12 +21,11 @@ if(!args[0])return message.channel.send({
             author: { name: `${client.user.username}'s Commands` },
             footer: { text: `Requested By: ${message.author.tag}`, icon: message.author.avatarURL() },
             fields: [
-                { name: 'Bot', value: '`ping`' },
+                { name: 'Bot', value: '`ping`, `invite`, `prefix`' },
                 { name: 'Music', value: '`play`, `pause`, `playlist`, `resume`, `queue`, `lyrics`, `remove`, `skipto`, `afk`, `search`, `shuffle`, `np`, `loop`, `volume`, `skip`, `stop`' },
-                { name: 'Filters', value: '`bassboost`, `8D`, `vaporwave`, `nightcore`, `phaser`, `tremolo`, `vibrato`, `reverse`, `treble`, `normalizer`, `surrounding`, `pulsator`, `subboost`, `karaoke`, `flanger`, `gate`, `haas`, `mcompand`' },
                 {name: "Quick Links", value: `[Invite](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=3169280&scope=bot) | [Support Server](${client.config.support})`}],
             timestamp: new Date(),
-            description: `To use filters, filter (the filter). Example : ${p}filter bassboost.`,
+            description: `${client.user.username} is the easiest way to play music in your Discord server. It supports YouTube only.`,
         },
     });
         else {

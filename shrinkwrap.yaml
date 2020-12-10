@@ -1,5 +1,6 @@
 dependencies:
   '@discordjs/opus': 0.3.3
+  discord-player: 3.0.3
   discord.js: 12.5.1
   dotenv: 8.2.0
   ffmpeg: 0.0.4
@@ -271,6 +272,19 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-qbqoYKP5tZWmuBsahocxIe06Jp4=
+  /cheerio/1.0.0-rc.3:
+    dependencies:
+      css-select: 1.2.0
+      dom-serializer: 0.1.1
+      entities: 1.1.2
+      htmlparser2: 3.10.1
+      lodash: 4.17.20
+      parse5: 3.0.3
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha512-0td5ijfUPuubwLUu0OBoe98gZj8C/AA+RW3v67GPlGOrvxWjZmBXiBCRU+I8VEiNyJzjth40POfHiz2RB3gImA==
   /chownr/2.0.0:
     dev: false
     engines:
@@ -329,6 +343,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+  /cross-fetch/3.0.6:
+    dependencies:
+      node-fetch: 2.6.1
+    dev: false
+    resolution:
+      integrity: sha512-KBPUbqgFjzWlVcURG+Svp9TlhA5uliYtiNx/0r8nv0pdypeQCRJ9IaSIc3q/x3q8t3F75cHuwxVql1HFGHCNJQ==
   /css-select/1.2.0:
     dependencies:
       boolbase: 1.0.0
@@ -413,6 +433,26 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
+  /discord-player/3.0.3:
+    dependencies:
+      '@types/node': 14.14.12
+      discord-ytdl-core: 5.0.0
+      merge-options: 3.0.4
+      moment: 2.29.1
+      node-fetch: 2.6.1
+      soundcloud-scraper: 4.0.1
+      spotify-url-info: 2.2.0
+      youtube-sr: 2.0.4
+      ytdl-core: 4.1.4
+    dev: false
+    resolution:
+      integrity: sha512-rfuoyKG4ykEpTlN5MKgvp3xz33wV9Pe/4f4HsZIKAMxqHmT+PtOnAIk/x0Kg9DZSzKYx0uic7II8dr7bdNE19w==
+  /discord-ytdl-core/5.0.0:
+    dependencies:
+      prism-media: 1.2.3
+    dev: false
+    resolution:
+      integrity: sha512-lhk3VabO3vC+57ZIL0yOCaB5eyco9qmygmXwHoAr9c4VVzG9e02iGCvLAYzMIxOoBtuIggavNLwFTZ6gO6byJA==
   /discord.js/12.5.1:
     dependencies:
       '@discordjs/collection': 0.1.6
@@ -663,6 +703,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+  /himalaya/1.1.0:
+    dev: false
+    resolution:
+      integrity: sha512-LLase1dHCRMel68/HZTFft0N0wti0epHr3nNY7ynpLbyZpmrKMQ8YIpiOV77TM97cNpC8Wb2n6f66IRggwdWPw==
   /html-entities/1.3.1:
     dev: false
     resolution:
@@ -760,6 +804,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-o7MKXE8ZkYMWeqq5O+764937ZU8=
+  /is-plain-obj/2.1.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==
   /is-promise/2.2.2:
     dev: false
     resolution:
@@ -905,6 +955,14 @@ packages:
     optional: true
     resolution:
       integrity: sha512-ZS4Bp4r/Zoeq6+NLJpP+0Zzm0pR8whtGPf1XExKLJBAczGMnSi3It14OiNCStjQjM6NU1okjQGSxgEZN8eBYKg==
+  /merge-options/3.0.4:
+    dependencies:
+      is-plain-obj: 2.1.0
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-2Sug1+knBjkaMsMgf1ctR1Ujx+Ayku4EdJN4Z+C2+JzoeF7A3OZ9KM2GY0CpQS51NR61LTurMJrRKPhSs3ZRTQ==
   /mime-db/1.44.0:
     dev: false
     engines:
@@ -978,6 +1036,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
+  /moment/2.29.1:
+    dev: false
+    resolution:
+      integrity: sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
   /mongodb/3.6.3:
     dependencies:
       bl: 2.2.1
@@ -1227,6 +1289,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-juqz5U+laSD+Fro493+iGqzC104=
+  /parse5/3.0.3:
+    dependencies:
+      '@types/node': 14.14.12
+    dev: false
+    resolution:
+      integrity: sha512-rgO9Zg5LLLkfJF9E6CCmXlSE4UVceloys8JrFqCcHloC3usd/kJCyPDwH2SOlzix2j3xaP9sUX3e8+kvkuleAA==
   /path-is-absolute/1.0.1:
     dev: false
     engines:
@@ -1404,6 +1472,14 @@ packages:
     dev: false
     resolution:
       integrity: sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=
+  /soundcloud-scraper/4.0.1:
+    dependencies:
+      cheerio: 1.0.0-rc.3
+      m3u8stream: 0.8.3
+      node-fetch: 2.6.1
+    dev: false
+    resolution:
+      integrity: sha512-8QA5kmmr0X2NmFVG+VkeGA8J7+e/oqe9pKwB9h572eY4B1JVM/Hb4J6OH9+OmcBDt/7lCPM5C7aIl7dlQ+oTXQ==
   /source-map/0.6.1:
     dev: false
     engines:
@@ -1418,6 +1494,22 @@ packages:
     optional: true
     resolution:
       integrity: sha1-/0rm5oZWBWuks+eSqzM004JzyhE=
+  /spotify-uri/2.1.0:
+    dev: false
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-+QjB/9zRsbGB+2oOPK6K4jidLEWbsY43mov84vEj66dNj0aqqz6ul6VbxfUDlklOqgL4kVLFC/Yhr01PcXlJbQ==
+  /spotify-url-info/2.2.0:
+    dependencies:
+      cross-fetch: 3.0.6
+      himalaya: 1.1.0
+      spotify-uri: 2.1.0
+    dev: false
+    engines:
+      node: '>=12.0.0'
+    resolution:
+      integrity: sha512-GEMoMf2RF+CSPsSGstY/9c7dgViKOKJ09bFZTwrU4KzQ+JpLq+0Ho4eMCeeGmES94yjBz+GHMtBfTcp+4DxEbA==
   /static-eval/2.0.2:
     dependencies:
       escodegen: 1.14.3
@@ -1632,6 +1724,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@discordjs/opus': ^0.3.2
+  discord-player: ^3.0.2
   discord.js: ^12.3.1
   dotenv: ^8.2.0
   ffmpeg: 0.0.4

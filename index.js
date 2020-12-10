@@ -5,7 +5,9 @@ const { Collection, Client } = require("discord.js");
 const client = new Client();//Making a discord bot client
 client.commands = new Collection();//Making client.commands as a Discord.js Collection
 client.queue = new Map()
-
+const { Player } = require("discord-player")
+const player = new Player(client)
+client.player = player;
 client.config = {
   prefix: ".",
   MongoDB: "mongodb://ugrsnmrfptbdsblkneky:s6vdckTet7FtYET55qUp@bjzdgr8stmb8isz-mongodb.services.clever-cloud.com:27017/bjzdgr8stmb8isz",
