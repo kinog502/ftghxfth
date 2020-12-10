@@ -35,26 +35,6 @@ fs.readdir("./commands/", (err, files) => {
     console.log("Loading Command: "+commandName)
   });
 });
-const Discord = require("discord.js")
-let prefix = client.config.prefix
-client.on("message", message =>{
-if(message.author.bot) return;
-if(message.content === prefix + "server"){
-let text = message.guild.channels.cache.filter(m => m.type === "text").size;
-let voice = message.guild.channels.cache.filter(m => m.type === "voice").size;
-let embed = new Discord.MessageEmbed()
-.setTitle(message.guild.name)
-.setThumbnail(message.guild.iconURL())
-.addField('Server ID', message.guild.id, true)
-.addField('Owner', `<@${message.guild.ownerID}>`, true)
-.addField('Members', message.guild.memberCount, false)
-.addField('Channels', `Text: \`${text}\` | Voice: \`${voice}\``, false)
-.addField('Roles', message.guild.roles.cache.size, false)
-.addField('Emojis**', message.guild.emojis.cache.size, false)
-.addField('**Voice Region**', message.guild.region, false)
-.addField('Boosts', `${message.guild.premiumSubscriptionCount}`, false)
-.setColor('#00ff8e')
-      message.channel.send(embed)
-}})
+
 //Logging in to discord
 client.login(client.config.Token)
