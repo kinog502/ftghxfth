@@ -11,8 +11,8 @@ client.player = player;
 client.config = {
   prefix: ".",
   MongoDB: "mongodb://ugrsnmrfptbdsblkneky:s6vdckTet7FtYET55qUp@bjzdgr8stmb8isz-mongodb.services.clever-cloud.com:27017/bjzdgr8stmb8isz",
-  Token: "NzY1MzcxNjgzOTUwNTU5MjMz.X4T17Q.-Lbsjn4A7ksD_389y_rSrJY3_1k",
-  support: ""
+  Token: "Nzg2NzE5MTE0MDU5MzE3MzI5.X9KfRQ.rGNbKbuBan2-OeMVlFSTSxPMYCo",
+  support: "https://discord.gg/tU2HMUH8UR"
   
 }
 

@@ -16,7 +16,7 @@ if(prefix1 === null ) prefix1 = client.config.prefix;
 
 var p = prefix1
 if(!args[0])return message.channel.send(new MessageEmbed().setDescription(`${client.user.username} is the easiest way to play music in your Discord server. It supports YouTube only.`)
-.setAuthor(client.user.username, client.user.avatarURL()).addField("Bot",'`ping`, `invite`, `prefix`')
+.setAuthor(client.user.username, client.user.avatarURL()).addField("Bot",'`ping`, `invite`, `prefix`, `stats`, `about`')
 .setFooter(`Requested By: ${message.author.tag}`, message.author.avatarURL()).setTimestamp()
  .setColor("GREEN")             
 .setThumbnail(client.user.avatarURL())
